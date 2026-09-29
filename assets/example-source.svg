@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Example mark on a 512 grid: transparent background, strokes >= 32 units (≈1px at 16px) -->
+  <polygon points="256,56 429.2,156 429.2,356 256,456 82.8,356 82.8,156"
+           fill="none" stroke="#4f46e5" stroke-width="44" stroke-linejoin="round"/>
+  <circle cx="256" cy="256" r="72" fill="#4f46e5"/>
+</svg>
