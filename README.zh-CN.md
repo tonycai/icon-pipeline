@@ -33,7 +33,7 @@ ln -s ~/workspace/icon-pipeline ~/.claude/skills/icon-pipeline
 
 ```bash
 mkdir -p ~/.claude/skills
-unzip icon-pipeline-v2.0.0.zip -d ~/.claude/skills/
+unzip icon-pipeline-v2.0.1.zip -d ~/.claude/skills/
 chmod +x ~/.claude/skills/icon-pipeline/scripts/*.sh
 ```
 

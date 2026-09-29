@@ -16,7 +16,7 @@
 set -euo pipefail
 shopt -u patsub_replacement 2>/dev/null || true   # bash 5.2+: keep '&' literal in ${var//x/y}
 
-readonly VERSION="2.0.0"
+readonly VERSION="2.0.1"
 PROG="${0##*/}"
 readonly PROG
 
