@@ -204,11 +204,13 @@ detect_tools() {
 
 install_hints() {
   cat <<'EOF'
-Install (all open source):
+Install (all open source) — easiest, macOS or Ubuntu/Debian, no cargo needed:
+  bash ~/.claude/skills/icon-pipeline/scripts/install-deps.sh
+Manual:
   macOS   : brew install resvg imagemagick oxipng jq svgo
-  Ubuntu  : sudo apt install imagemagick jq librsvg2-bin      # rsvg-convert as renderer
-            cargo install resvg oxipng                        # optional: preferred renderer + PNG optimizer
-            npm i -g svgo                                     # optional: SVG minifier
+  Ubuntu  : sudo apt install imagemagick librsvg2-bin jq fonts-noto-cjk
+            resvg / oxipng: prebuilt binaries from their GitHub releases (install-deps.sh does this)
+            svgo (optional): npm i -g svgo
   OG fonts: Noto Sans CJK / Source Han Sans (SIL OFL) — set OG_FONT_FILE for reproducible output
 EOF
 }

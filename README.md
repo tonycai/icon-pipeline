@@ -41,7 +41,7 @@ Then install the toolchain and check it:
 
 ```bash
 brew install resvg imagemagick oxipng jq svgo                  # macOS
-# Ubuntu: sudo apt install imagemagick jq librsvg2-bin && cargo install resvg oxipng && npm i -g svgo
+bash ~/.claude/skills/icon-pipeline/scripts/install-deps.sh    # Ubuntu/Debian: downloads prebuilt binaries, no cargo needed
 
 bash ~/.claude/skills/icon-pipeline/scripts/build-icons.sh --deps
 ```
@@ -71,7 +71,8 @@ icon-pipeline/
 │   └── og.md                OG template, fonts, verification
 ├── scripts/
 │   ├── build-icons.sh       the pipeline (bash 3.2 compatible)
-│   └── init-project.sh      vendors the pipeline into a project, auto-detects settings
+│   ├── init-project.sh      vendors the pipeline into a project, auto-detects settings
+│   └── install-deps.sh      installs the toolchain (Homebrew, or apt + prebuilt binaries)
 ├── templates/
 │   ├── icons.mk             make targets
 │   └── icon.env             settings template

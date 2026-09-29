@@ -41,7 +41,7 @@ chmod +x ~/.claude/skills/icon-pipeline/scripts/*.sh
 
 ```bash
 brew install resvg imagemagick oxipng jq svgo                  # macOS
-# Ubuntu: sudo apt install imagemagick jq librsvg2-bin && cargo install resvg oxipng && npm i -g svgo
+bash ~/.claude/skills/icon-pipeline/scripts/install-deps.sh    # Ubuntu/Debian：下载预编译二进制，不需要 cargo
 
 bash ~/.claude/skills/icon-pipeline/scripts/build-icons.sh --deps
 ```
@@ -71,7 +71,8 @@ icon-pipeline/
 │   └── og.md                OG 模板、字体、验证方法
 ├── scripts/
 │   ├── build-icons.sh       主流水线（兼容 bash 3.2）
-│   └── init-project.sh      接入项目并自动识别配置
+│   ├── init-project.sh      接入项目并自动识别配置
+│   └── install-deps.sh      安装工具链（Homebrew，或 apt + 预编译二进制）
 ├── templates/
 │   ├── icons.mk             make 目标
 │   └── icon.env             配置模板
